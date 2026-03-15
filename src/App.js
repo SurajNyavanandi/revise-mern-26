@@ -1,4 +1,5 @@
 import Student from './StudentComponent';
+import style from'./Bstyle.module.css';
 
 let v1="Jai Shree Rama";
 let v2="Om Namah Shivaya";
@@ -37,11 +38,15 @@ function App(){
        <input type="number" placeholder="Enter age :"/>
        
        <h4>Student Component</h4>
-       <Student></Student>
-       <Student></Student>
-       <Student></Student>
-       
-    </>
+
+       <div className={style['div-class']}>
+        <Student name="Jai Shree Rama" age={26} friend="Om Namah Shivaya"></Student>
+       <Student name="Shree Shiva" age={26} friend="Jai Shree Rama"></Student>
+       <Student name="Shree Krishna" age={52} friend="Shree Hanuma"></Student>
+       <Student name="Shree Hanuma" age={78} friend="Shree Shiva"></Student>
+   
+       </div>
+        </>
   )
 };
 

@@ -1,10 +1,16 @@
-const Student =()=>{
-    return (
+const Student =(props)=>{
+
+  //object desecturcting
+  const {name,age,friend}=props;
+  //extract individual
+  const fnmae=props.name;
+  
+  return (
     <>
       <h4>Student Component</h4>
-      <h3>Name: Jai Shree Rama</h3>
-      <h3>Age: 26</h3>
-      <h3>Friend:Om Namah Shivaya</h3>          
+      <span> Name: {name}</span>
+      <span> Age: {age}</span>
+      <span> Friend: {friend}</span>          
     </>
     )
 };
