@@ -35,10 +35,8 @@ function App(){
        <label className="label-class" htmlFor="name" style={{color:'Blue',fontSize:'16px'}}>Enter Name :</label>
        <input type="text" placeholder="Enter name :" minLength={3} maxLength={6} /><br/>
        <label htmlFor="age">Age :</label>
-       <input type="number" placeholder="Enter age :"/>
-       
+       <input type="number" placeholder="Enter age :"/>  
        <h4>Student Component</h4>
-
        <div className={style['div-class']}>
         <Student name="Jai Shree Rama" age={26} friend="Om Namah Shivaya"></Student>
        <Student name="Shree Shiva" age={26} friend="Jai Shree Rama"></Student>
