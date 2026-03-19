@@ -6,6 +6,7 @@ import RegisterComponent from './Routing/Register';
 import HomeComponent from './Routing/Home';
 import HttpComponent from './Http/Http';
 import FormComponent from './Form/Form';
+import Form2Component from './Form/Form2';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const root=ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,6 +23,7 @@ root.render(
              <Route path='/register' element={<RegisterComponent></RegisterComponent>}></Route>
              <Route path="/http" element={<HttpComponent></HttpComponent>}></Route>
              <Route path="/form" element={<FormComponent></FormComponent>}></Route>
+             <Route path="/form2" element={<Form2Component></Form2Component>}></Route>
              <Route path='*' element={<HomeComponent></HomeComponent>}></Route>
 
   </Routes>
