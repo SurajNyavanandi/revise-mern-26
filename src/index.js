@@ -1,17 +1,47 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {BrowserRouter,Route, Routes} from 'react-router-dom';
+import ContactComponent from './Routing/Contact';
+import LoginComponent from './Routing/Login';
+import RegisterComponent from './Routing/Register';
+import HomeComponent from './Routing/Home';
+import HttpComponent from './Http/Http';
+import FormComponent from './Form/Form';
+import Form2Component from './Form/Form2';
+import 'bootstrap/dist/css/bootstrap.min.css';
+const root=ReactDOM.createRoot(document.getElementById('root'));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  {/* <F1component></F1component> */}
+  <BrowserRouter>
+    {/* <h2>Jai Shree Rama Om Namah Shivaya</h2> */}
+              <Routes>
+              <Route path='/' element={<HomeComponent></HomeComponent>}></Route>
+             <Route path='/contact/:name?' element={<ContactComponent></ContactComponent>}></Route>
+             <Route path='/login' element={<LoginComponent></LoginComponent>}></Route>
+             <Route path='/register' element={<RegisterComponent></RegisterComponent>}></Route>
+             <Route path="/http" element={<HttpComponent></HttpComponent>}></Route>
+             <Route path="/form" element={<FormComponent></FormComponent>}></Route>
+             <Route path="/form2" element={<Form2Component></Form2Component>}></Route>
+             <Route path='*' element={<HomeComponent></HomeComponent>}></Route>
+
+  </Routes>
+  </BrowserRouter>
+
+  {/* <ParentComponent></ParentComponent> */}
+  {/* <UseStateComponent></UseStateComponent> */}
+  {/* <UseRefHook></UseRefHook> */}
+  {/* <CounterWithoutEffect>22</CounterWithoutEffect> */}
+  {/* <LstatecleComponent></LifeCycleComponent> */}
+  {/* <KeyComponent></KeyComponent> */}
+  {/* <ImageComponent></ImageComponent>
+  <App></App> */}
+  {/* <UseStateComponent></UseStateComponent> */}
+   {/* <EventComponent></EventComponent> */}
+{/*   
+     <App></App>
+     <ClassComponent></ClassComponent> */}
+  </>
+    
+)
