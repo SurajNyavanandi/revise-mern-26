@@ -1,24 +1,31 @@
 import Student from './StudentComponent';
 import style from'./Bstyle.module.css';
+import { useState } from 'react';
 
-let v1="Jai Shree Rama";
-let v2="Om Namah Shivaya";
-const age=26;
-let a1=[26,25,11,10,4,6,78,true,"Jai Shree Rama","Om Namah Shivaya"];
-let a2=["Orange","Apple","Banana","Grapes","Mango","Pineapple"];
-let obj={
-  name:"Jai Shree Rama",
-  age:26
-}
+// let v1="Jai Shree Rama";
+// let v2="Om Namah Shivaya";
+// const age=26;
+// let a1=[26,25,11,10,4,6,78,true,"Jai Shree Rama","Om Namah Shivaya"];
+// let a2=["Orange","Apple","Banana","Grapes","Mango","Pineapple"];
+// let obj={
+//   name:"Jai Shree Rama",
+//   age:26
+// }
 
-function f1(){
-  return "String from function";
-}
+// function f1(){
+//   return "String from function";
+// }
+
+
+
 
 function App(){
+const [loggedIn,setLoggedIn]=useState(false);
+
   return (
     <>
-       <h4>React App</h4>
+    <button onClick={()=>setLoggedIn(!loggedIn)}> {loggedIn ? "Logout" : "Login"}</button>
+       {/* <h4>React App</h4>
        <h4> {v1}{v2}</h4>
        <h4>Age:{age}</h4>
        <h4>function :{f1()}</h4>
@@ -43,7 +50,7 @@ function App(){
        <Student name="Shree Krishna" age={52} friend="Shree Hanuma"></Student>
        <Student name="Shree Hanuma" age={78} friend="Shree Shiva"></Student>
    
-       </div>
+       </div> */}
         </>
   )
 };
